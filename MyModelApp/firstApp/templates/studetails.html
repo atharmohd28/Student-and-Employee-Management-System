@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>show page</title>
+</head>
+<body style="background-color: rgb(187, 134, 236);">
+    <center><u><h1>this page is show all the students data</h1></u></center><br><br>
+<table colspan="2" border="2">
+    <tr>
+        <td>Id</td>
+        <td>Firstname</td>
+        <td>Lastname</td>
+        <td>FatherName</td>
+        <td>STD</td>
+        <td>Roll No</td>
+        <td>Physics Marks</td><br>
+        <td>Chemistry Marks</td>
+        <td>Maths Marks</td>
+        <td>Email</td>
+        <td>Password</td>
+        <td>Mobile No</td>
+        <td>Address</td>
+        <td>Delete</td>
+        <td>Update</td>
+    </tr>
+    {% for i in data %}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.firstname}}</td>
+        <td>{{i.lastname}}</td>
+        <td>{{i.Fathername}}</td>
+        <td>{{i.std}}</td>
+        <td>{{i.rollno}}</td>
+        <td>{{i.PhyMarks}}</td>
+        <td>{{i.CheMarks}}</td>
+        <td>{{i.MathMarks}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.password}}</td>
+        <td>{{i.mob}}</td>
+        <td>{{i.Add}}</td>
+        <td><a class="btn btn-primary" href="stuupdate" role="button">Update</a></td>
+        <td><a class="btn btn-info" href="studelete" role="button">Delete</a></td>
+        
+    </tr>
+    {% endfor %}
+
+</table>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body>
+</html>
